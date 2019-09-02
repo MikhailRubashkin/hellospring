@@ -4,20 +4,16 @@ import by.pvt.service.MessageType;
 
 public class SendMessageCmd {
 
-
-
-    public final String reciverName;
+    public final String receiverName;
 
     public final MessageType messageType;
 
+    public final String channel;
 
-    public final String chanel;
-
-    public SendMessageCmd ( String reciverName, MessageType messageType, String chanel){
-
-        this.reciverName = reciverName;
+    public SendMessageCmd(String receiverName, MessageType messageType, String channel) {
+        this.receiverName = receiverName;
         this.messageType = messageType;
-        this.chanel = chanel;
+        this.channel = channel;
     }
 
 }

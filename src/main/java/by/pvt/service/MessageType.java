@@ -2,30 +2,22 @@ package by.pvt.service;
 
 public enum MessageType {
 
-    INVITATION_MESSAGE ( "You are invited to course", "You"),
-        CENCEL_MESSAGE("jkl;aj", "Me");
+    INVITATION_MESSAGE("Dear %s, You are invited to course", "Invitation"),
+    CANCEL_MESSAGE("Dear %s, Course is canceled", "Cancellation");
 
     private String body;
     private String subject;
 
-    public void setBody ( String body ){
-        this.body = body;
-    }
-
-    public String getSubject (){
-        return subject;
-    }
-
-    public void setSubject ( String subject ){
-        this.subject = subject;
-    }
-
-    MessageType ( String body, String subject ){
+    MessageType(String body, String subject) {
         this.body = body;
         this.subject = subject;
     }
 
-    public String getBody (){
+    public String getBody() {
         return body;
+    }
+
+    public String getSubject() {
+        return subject;
     }
 }
